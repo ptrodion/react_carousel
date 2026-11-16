@@ -64,7 +64,7 @@ Error generating stack: `+o.message+`
     opacity: 0.3;
     cursor: default;
   }
-`,Zm=e=>{const{images:t,itemWidth:n,frameSize:r,step:l,animationDuration:o,infinite:i}=e,[u,s]=be.useState(0),c=Math.max(0,t.length-r),p=Math.min(u,c),h=!i&&p===0,m=!i&&p===c,v=()=>{if(p===c){i&&s(0);return}s(Math.min(p+l,c))},g=()=>{if(p===0){i&&s(c);return}s(Math.max(p-l,0))};return Y.jsxs(Gm,{children:[Y.jsx(ya,{type:"button","data-cy":"prev",className:h?"disabled":"",disabled:h,onClick:g,children:"←"}),Y.jsx(Km,{$width:n*r,children:Y.jsx(Ym,{style:{transform:`translateX(-${p*n}px)`,transition:`transform ${o}ms ease`},children:t.map((S,z)=>Y.jsx(Xm,{$itemWidth:n,children:Y.jsx("img",{width:n,src:S,alt:`Image ${z+1}`})},S))})}),Y.jsx(ya,{type:"button","data-cy":"next",className:m?"disabled":"",disabled:m,onClick:v,children:"→"})]})},Jm=Ze.div`
+`,Zm=e=>{const{images:t,itemWidth:n=130,frameSize:r=3,step:l=3,animationDuration:o=1e3,infinite:i=!1}=e,[u,s]=be.useState(0),c=Math.max(0,t.length-r),p=Math.min(u,c),h=!i&&p===0,m=!i&&p===c,v=()=>{if(p===c){i&&s(0);return}s(Math.min(p+l,c))},g=()=>{if(p===0){i&&s(c);return}s(Math.max(p-l,0))};return Y.jsxs(Gm,{children:[Y.jsx(ya,{type:"button","data-cy":"prev",className:h?"disabled":"",disabled:h,onClick:g,children:"←"}),Y.jsx(Km,{$width:n*r,children:Y.jsx(Ym,{style:{transform:`translateX(-${p*n}px)`,transition:`transform ${o}ms ease`},children:t.map((S,z)=>Y.jsx(Xm,{$itemWidth:n,children:Y.jsx("img",{width:n,src:S,alt:`Image ${z+1}`})},S))})}),Y.jsx(ya,{type:"button","data-cy":"next",className:m?"disabled":"",disabled:m,onClick:v,children:"→"})]})},Jm=Ze.div`
   padding: 0 15px;
   gap: 10px;
   display: flex;
